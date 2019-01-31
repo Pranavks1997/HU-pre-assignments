@@ -1,0 +1,35 @@
+body{
+	margin:40px;
+	background: #fff;
+	font-family: Arial,sans-serif;
+}
+
+#banner{
+	width: 1000px;
+	height: 150px;
+	margin: 0px auto;
+	border: 5px solid #639;
+	overflow: hidden;
+}
+#banner >#banner_backdrop{
+	position: relative;
+	background: url(ipl2.jpg) repeat-x;
+	width: 1320px;
+	height: 200px;
+	-webkit-animation: backdrop_roll linear 12s infinite;
+}
+
+@-webkit-keyframes backdrop_roll{
+	from{right: 0px;}
+	to {right: 320px;}
+}
+
+#banner > #banner_content{
+	position: relative;
+	width: 96%;
+	height: 160px;
+	margin: 20px auto;
+	top:-200px;
+	color: #FFF;
+	font-size: 27px;
+}

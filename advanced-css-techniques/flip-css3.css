@@ -1,0 +1,43 @@
+.box{
+	width: 240px;
+	height: 200px;
+	margin: 11px;
+	float: left;
+}
+.front{
+	position: absolute;
+	-webkit-transform: perspective(600px) rotateY( 0deg );
+	transform: perspective(600px) rotateY( 0deg );
+	width: 240px;
+	height: 200px;
+	background: #FC0;
+	border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+
+.back{
+	position: absolute;
+	-webkit-transform: perspective(600px) rotateY( 180deg );
+	transform: perspective(600px) rotateY( 180deg );
+	width: 240px;
+	height: 200px;
+	background: #80BFFF;
+	border-radius: 7px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+
+.box:hover > .front{
+	-webkit-transform: perspective(600px) rotateY(-180deg);
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+.box:hover > .back{
+	-webkit-transform: perspective(600px) rotateY(0deg);
+	transform: perspective(600px) rotateY(0deg);
+}
